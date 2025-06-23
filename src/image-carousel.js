@@ -10,10 +10,13 @@ class ImageCarousel {
         setInterval(this.nextSlide.bind(this), 5000);
     }
 
-    displaySlide() {
+    displaySlide(index = -1) {
+        if (index === -1)
+            index = this.currentIndex;
+
         for (let i = 0; i < this.slides.length; i++) {
             let slide = this.slides[i];
-            if (this.currentIndex === i) {
+            if (index === i) {
                 slide.style.display = 'block';
                 this.imageDots.highlightDot(i);
                 continue;

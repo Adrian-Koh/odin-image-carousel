@@ -12,3 +12,11 @@ document.querySelector('#left-arrow').addEventListener('click', () => {
 document.querySelector('#right-arrow').addEventListener('click', () => {
     imageCarousel.nextSlide();
 });
+
+const dots = document.querySelectorAll('.dot');
+for (const dot of dots) {
+    dot.addEventListener('click', (event) => {
+        imageDots.updateHighlightedDot(event.target);
+        imageCarousel.displaySlide(imageDots.currentIndex);
+    });
+}
