@@ -1,6 +1,7 @@
 body {
     width: 50vw;
     justify-self: center;
+
 }
 
 #container {
@@ -31,7 +32,8 @@ body {
 #left-arrow, #right-arrow {
     font-size: 50px;
     background-color: inherit;
-    border: solid 2px black;
+    border: solid 2px rgb(49, 133, 133);
+    color: rgb(49, 133, 133);
     border-radius: 50%;
     padding: 0 20px;
 }
@@ -52,14 +54,14 @@ img {
 
 a {
     text-decoration: none;
-    color: aqua;
+    color: rgb(49, 133, 133);
 }
 
 .dot {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    border: solid 3px black;
+    border: solid 3px rgb(49, 133, 133);
 }
 
 #unselected {
@@ -67,5 +69,17 @@ a {
 }
 
 #selected {
-    background-color: black;
+    background-color: rgb(49, 133, 133);
+}
+
+.slide {
+    border: solid 2px rgb(49, 133, 133);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgb(49, 133, 133);
+    padding: 10px;
+}
+
+.credit {
+    text-align: center;
+    font-size: 14px;
 }
