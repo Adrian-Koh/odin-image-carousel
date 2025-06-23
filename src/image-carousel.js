@@ -4,6 +4,7 @@ class ImageCarousel {
         this.slides = this.slideContainer.children;
         this.currentIndex = 0;
         this.displaySlide();
+        setInterval(this.nextSlide.bind(this), 5000);
     }
 
     displaySlide() {
@@ -16,4 +17,22 @@ class ImageCarousel {
             slide.style.display = 'none';
         }
     }
+
+    nextSlide() {
+        this.currentIndex += 1;
+        if (this.currentIndex > this.slides.length - 1) {
+            this.currentIndex = 0;
+        }
+        this.displaySlide();
+    }
+
+    previousSlide() {
+        this.currentIndex -= 1;
+        if (this.currentIndex < 0) {
+            this.currentIndex = this.slides.length - 1;
+        }
+        this.displaySlide();
+    }
 }
+
+export {ImageCarousel}
